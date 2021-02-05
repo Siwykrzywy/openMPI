@@ -13,11 +13,18 @@ Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/reposito
 ```
 sudo docker pull Siwykrzywy/openMPI:last
 ```
-Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
+2. Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
 Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1
 ```
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107068201-9b411100-67e0-11eb-91ae-bf5c182c2289.png)
-
+![image](https://user-images.githubusercontent.com/28909864/107068486-fe32a800-67e0-11eb-9a6d-d335bf30216d.png)
+3. Kolejnym krokiem będzie sprawdzenie czy kontenery poprawnie się uruchomiły, realizujemy to komendą:
+```
+sudo docker ps -a
+```
+![image]https://github.com/Siwykrzywy/openMPI/issues/3#issue-802351527
+W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia
+3. Przechodzimy do katalogu /usr
 
