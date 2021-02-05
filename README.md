@@ -44,7 +44,7 @@ Oraz przejść do katalogu:
  ```
 cd /usr/bin
 ```
-2. Kolejnym krokiem będzie utwaorzenie pliku mpi.c przy użyciu komendy
+2. Kolejnym krokiem będzie utworzenie pliku mpi.c przy użyciu komendy
 ```
 touch mpi.c
 ```
