@@ -6,7 +6,7 @@ Projekt ten został wykonany w ramach zaliczenia zajęć z przedmiotu PWiR. Zawa
 Pierwszym krokiem będzie sklonowanie tego repozytorium: https://github.com/Siwykrzywy/openMPI<br/>
 Do budowy kontenera wykorzystano polecenie docker build. Na obrazie zainstalowany został git, docker, openssh, openMPI oraz wszystko co po drodze okazało się potrzebne do realizacji projektu.
 
-Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/repository/docker/siwykrzywy/openmpi
+Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/r/siwykrzywy/openmpi
 
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
