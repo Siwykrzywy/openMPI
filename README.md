@@ -61,7 +61,7 @@ vi mpi.c
 ```
 5. Wpisać kod, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść
 ![image](https://user-images.githubusercontent.com/28909864/107070447-a6497080-67e3-11eb-90c4-071a90aa8e4b.png)
-6. Teraz należy skopliować plik komendą:
+6. Teraz należy skompliować plik komendą:
 ```
 mpicc -o mpi mpi.c
 
