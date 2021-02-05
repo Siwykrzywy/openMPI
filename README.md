@@ -10,13 +10,14 @@ Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/reposito
 
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
-'''
+```
 sudo docker pull Siwykrzywy/openMPI:last
-'''
+```
 Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
 Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1
-'''
+```
 sudo docker-compose scale mpi_node=5 mpi_head=1
-'''
-![alt text](https://imgur.com/4ao5eWx)
+```
+![image](https://user-images.githubusercontent.com/28909864/107068201-9b411100-67e0-11eb-91ae-bf5c182c2289.png)
+
 
