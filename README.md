@@ -75,7 +75,7 @@ mpirun --allow-run-as-root -n 5 mpi
 ![image](https://user-images.githubusercontent.com/28909864/107071004-5fa84600-67e4-11eb-89cb-570e13deb77b.png)
 Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
 
-##Bibliografia
+## Bibliografia
 - https://docs.docker.com/engine/install/ubuntu/
 - https://www.researchgate.net/publication/282310578_Building_a_Virtual_HPC_Cluster_with_Auto_Scaling_by_the_Docker
 - https://github.com/oweidner/docker.openmpi
