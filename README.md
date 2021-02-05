@@ -66,13 +66,13 @@ vi mpi.c
 mpicc -o mpi mpi.c
 
 ```
-![image](https://user-images.githubusercontent.com/28909864/107070628-e0b30d80-67e3-11eb-911e-66cd72a37b05.png)
+![image](https://user-images.githubusercontent.com/28909864/107070628-e0b30d80-67e3-11eb-911e-66cd72a37b05.png)<br/>
 7. Ostatnim krokiem będzie uruchomienie programu mpi, przy użyciu komendy:
 ```
 mpirun --allow-run-as-root -n 5 mpi
 
 ```
-![image](https://user-images.githubusercontent.com/28909864/107071004-5fa84600-67e4-11eb-89cb-570e13deb77b.png)
+![image](https://user-images.githubusercontent.com/28909864/107071004-5fa84600-67e4-11eb-89cb-570e13deb77b.png)<br/>
 Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
 
 ## Bibliografia
