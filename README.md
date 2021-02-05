@@ -40,3 +40,44 @@ sudo apt intall openmpi-bin
 sudo docker exec -it bc08d352274f bin/bash
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107069837-c88ebe80-67e2-11eb-92d5-f2682269618c.png)
+Oraz przejść do katalogu:
+ ```
+cd /usr/bin
+```
+2. Kolejnym krokiem będzie utwaorzenie pliku mpi.c przy użyciu komendy
+```
+touch mpi.c
+```
+3. Następnie należy zainstalować program vim przy użyciu komend:
+```
+sudo apt-get update
+sudo apt-get install vim
+
+```
+4. Uruchomić edycję stworzonego pliku używając programu vim:
+```
+vi mpi.c
+
+```
+5. Wpisać kod, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść
+![image](https://user-images.githubusercontent.com/28909864/107070447-a6497080-67e3-11eb-90c4-071a90aa8e4b.png)
+6. Teraz należy skopliować plik komendą:
+```
+mpicc -o mpi mpi.c
+
+```
+![image](https://user-images.githubusercontent.com/28909864/107070628-e0b30d80-67e3-11eb-911e-66cd72a37b05.png)
+7. Ostatnim krokiem będzie uruchomienie programu mpi, przy użyciu komendy:
+```
+mpirun --allow-run-as-root -n 5 mpi
+
+```
+![image](https://user-images.githubusercontent.com/28909864/107071004-5fa84600-67e4-11eb-89cb-570e13deb77b.png)
+Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
+
+##Bibliografia
+- https://docs.docker.com/engine/install/ubuntu/
+- https://www.researchgate.net/publication/282310578_Building_a_Virtual_HPC_Cluster_with_Auto_Scaling_by_the_Docker
+- https://github.com/oweidner/docker.openmpi
+- https://mrpycharm.github.io/openmpi-docker.html
+- oraz tutoriale z serwisu YT
