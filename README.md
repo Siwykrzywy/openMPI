@@ -19,13 +19,13 @@ Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden sere
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107068201-9b411100-67e0-11eb-91ae-bf5c182c2289.png)
-![image](https://user-images.githubusercontent.com/28909864/107068486-fe32a800-67e0-11eb-9a6d-d335bf30216d.png)
+![image](https://user-images.githubusercontent.com/28909864/107068486-fe32a800-67e0-11eb-9a6d-d335bf30216d.png)<br/>
 3. Kolejnym krokiem będzie sprawdzenie czy kontenery poprawnie się uruchomiły, realizujemy to komendą:
 ```
 sudo docker ps -a
 ```
-W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia kontenera
-![image](https://user-images.githubusercontent.com/28909864/107068983-93ce3780-67e1-11eb-9135-1ec2ce525350.png)
+W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia kontenera<br/>
+![image](https://user-images.githubusercontent.com/28909864/107068983-93ce3780-67e1-11eb-9135-1ec2ce525350.png)<br/>
 4. Gdy tylko jakaś komenda nie chce zadziałać wystarczy użyć:
 ```
 sudo apt-get update
@@ -39,7 +39,7 @@ sudo apt intall openmpi-bin
 ```
 sudo docker exec -it bc08d352274f bin/bash
 ```
-![image](https://user-images.githubusercontent.com/28909864/107069837-c88ebe80-67e2-11eb-92d5-f2682269618c.png)
+![image](https://user-images.githubusercontent.com/28909864/107069837-c88ebe80-67e2-11eb-92d5-f2682269618c.png)<br/>
 Oraz przejść do katalogu:
  ```
 cd /usr/bin
