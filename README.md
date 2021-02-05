@@ -24,7 +24,7 @@ sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
 sudo docker ps -a
 ```
-![image]https://github.com/Siwykrzywy/openMPI/issues/3#issue-802351527
+![image](https://github.com/Siwykrzywy/openMPI/issues/3#issue-802351527)
 W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia
 3. Przechodzimy do katalogu /usr
 
