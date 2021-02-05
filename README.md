@@ -14,7 +14,7 @@ Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/reposito
 sudo docker pull Siwykrzywy/openMPI:last
 ```
 2. Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
-Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1
+Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1. mpi_head jest hostem i udostępnia serwer SSH dla mpi_node który jest klientem.
 ```
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
@@ -24,7 +24,19 @@ sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
 sudo docker ps -a
 ```
+W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia kontenera
 ![image](https://user-images.githubusercontent.com/28909864/107068983-93ce3780-67e1-11eb-9135-1ec2ce525350.png)
-W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia
-3. Przechodzimy do katalogu /usr
-
+4. Gdy tylko jakaś komenda nie chce zadziałać wystarczy użyć:
+```
+sudo apt-get update
+```
+lub zainstalować ją jak na przykład:
+```
+sudo apt intall openmpi-bin
+```
+## Uruchomienie programu na klastrze HPC
+1. Pierwszym krokiem będzie uruchomienie kontenera mpi_head przy użyciu jego ID oraz komendy:
+```
+sudo docker exec -it bc08d352274f bin/bash
+```
+![image](https://user-images.githubusercontent.com/28909864/107069837-c88ebe80-67e2-11eb-92d5-f2682269618c.png)
