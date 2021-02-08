@@ -41,7 +41,7 @@ Pojawi się on na liście obrazów:<br/>
 ```
 sudo vim Dockerfile
 ```
-Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.
+Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.<br/>
 6. Teraz używamy komendy 
 ```
 docker build -t mpi .
