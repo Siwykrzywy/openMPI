@@ -25,7 +25,7 @@ Bazowo nie mamy tego obrazu na naszej maszynie, zostanie on ściągnięty a nast
 sudo docker image ls
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107254369-84e0c280-6a37-11eb-81ca-1fd0a81d8a99.png)<br/>
-Obraz hello-world został zapisany w naszym kontenerze i widzimy go na liście obrazów.
+Obraz hello-world został zapisany w naszym kontenerze i widzimy go na liście obrazów.<br/>
 4. Następnie musimy znaleźć repozytorium z obrazem bazowym, możemy znaleźć je używając komendy:
 ```
 sudo docker search baseimage
