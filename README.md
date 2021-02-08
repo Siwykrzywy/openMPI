@@ -8,6 +8,58 @@ Do budowy kontenera wykorzystano polecenie docker build. Na obrazie zainstalowan
 
 Gotowy obraz został umieszczony w repozytorium: https://hub.docker.com/r/siwykrzywy/openmpi
 
+## Opis przygotowania obrazu docker
+1. Instalacja dockera przy użyciu następujących poleceń:
+```
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+2. Test czy docker działa, przy użyciu obrazu hello world
+```
+sudo docker run hello-world
+```
+Bazowo nie mamy tego obrazu na naszej maszynie, zostanie on ściągnięty a następnie uruchomiony, potwierdza to że docker został pomyślnie zainstalowany.<br/>
+![image](https://user-images.githubusercontent.com/28909864/107254123-4945f880-6a37-11eb-8ae2-f93b111c2d2d.png)<br/>
+3. Możemy teraz sprawdzić listę obrazów dockera komendą:
+```
+sudo docker image ls
+```
+![image](https://user-images.githubusercontent.com/28909864/107254369-84e0c280-6a37-11eb-81ca-1fd0a81d8a99.png)<br/>
+Obraz hello-world został zapisany w naszym kontenerze i widzimy go na liście obrazów.
+4. Następnie musimy znaleźć repozytorium z obrazem bazowym, możemy znaleźć je używając komendy:
+```
+sudo docker search baseimage
+```
+![image](https://user-images.githubusercontent.com/28909864/107266301-9b8e1600-6a45-11eb-9bf9-90ce5a67bbd3.png)<br/>
+Najwięcej gwiazdek ma phusion/baseimage, zaciągamy ten obraz przy pomocy komendy:
+```
+sudo docker pull phusion/baseimage
+```
+Pojawi się on na liście obrazów
+![image](https://user-images.githubusercontent.com/28909864/107267134-c331ae00-6a46-11eb-83e8-389c7e3dfb47.png)<br/>
+5. Tworzymy dockerfile, pozwoli on na zbudowanie obrazu, na podstawie obrazu bazowego.
+```
+sudo vim Dockerfile
+```
+Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.
+6. Teraz używamy komendy 
+```
+docker build -t mpi .
+```
+Jeśli operacja się powiedzie powinniśmy otrzymać informację zwrotną o powodzeniu, a obraz powinien się pojawić na liście po wpisaniu komendy:
+```
+sudo docker image ls
+```
+![image](https://user-images.githubusercontent.com/28909864/107272145-8f0dbb80-6a4d-11eb-8b67-56717f983685.png)<br/>
+7. Następnie będziemy musieli zainstalować docker-compose, pozwala on uruchamiać wiele kontenerów, bez konieczności ręcznego konfigurowania każdego z nich. Zainstalujemy go używając pip, komenda do instalacji pip:
+```
+sudo apt install python3-pip
+```
+Komenda do instalacji docker-compose:
+```
+pip install docker-compose
+```
+8. Kolejnym krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
 ```
@@ -18,32 +70,25 @@ Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden sere
 ```
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
-![image](https://user-images.githubusercontent.com/28909864/107068201-9b411100-67e0-11eb-91ae-bf5c182c2289.png)
-![image](https://user-images.githubusercontent.com/28909864/107068486-fe32a800-67e0-11eb-9a6d-d335bf30216d.png)<br/>
+![image](https://user-images.githubusercontent.com/28909864/107273790-d39a5680-6a4f-11eb-915f-14539051e5e2.png)
+![image](![image](https://user-images.githubusercontent.com/28909864/107273918-05132200-6a50-11eb-9015-39fee31e387b.png)<br/>
 3. Kolejnym krokiem będzie sprawdzenie czy kontenery poprawnie się uruchomiły, realizujemy to komendą:
 ```
 sudo docker ps -a
 ```
-W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przedadzą się do uruchomienia kontenera<br/>
-![image](https://user-images.githubusercontent.com/28909864/107068983-93ce3780-67e1-11eb-9135-1ec2ce525350.png)<br/>
-4. Gdy tylko jakaś komenda nie chce zadziałać wystarczy użyć:
-```
-sudo apt-get update
-```
-lub zainstalować ją jak na przykład:
-```
-sudo apt intall openmpi-bin
-```
+W wyniku czego otrzymujemy następne informacje, dane zawarte w kolumnie CONTAINER ID przydadzą się do uruchomienia kontenera<br/>
+![image](https://user-images.githubusercontent.com/28909864/107273574-861de980-6a4f-11eb-80a6-021c71073790.png)
 ## Uruchomienie programu na klastrze HPC
 1. Pierwszym krokiem będzie uruchomienie kontenera mpi_head przy użyciu jego ID oraz komendy:
 ```
-sudo docker exec -it bc08d352274f bin/bash
+sudo docker exec -it 23a1d63b81f9 bin/bash
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107069837-c88ebe80-67e2-11eb-92d5-f2682269618c.png)<br/>
 Oraz przejść do katalogu:
  ```
 cd /usr/bin
 ```
+![image](https://user-images.githubusercontent.com/28909864/107274378-94203a00-6a50-11eb-998d-8470ab65d674.png)
 2. Kolejnym krokiem będzie utworzenie pliku mpi.c przy użyciu komendy
 ```
 touch mpi.c
@@ -59,12 +104,11 @@ sudo apt-get install vim
 vi mpi.c
 
 ```
-5. Wpisać kod, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść
+5. Wpisać kod testowy, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść
 ![image](https://user-images.githubusercontent.com/28909864/107070447-a6497080-67e3-11eb-90c4-071a90aa8e4b.png)
 6. Teraz należy skompliować plik komendą:
 ```
 mpicc -o mpi mpi.c
-
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107070628-e0b30d80-67e3-11eb-911e-66cd72a37b05.png)<br/>
 7. Ostatnim krokiem będzie uruchomienie programu mpi, przy użyciu komendy:
@@ -72,7 +116,8 @@ mpicc -o mpi mpi.c
 mpirun --allow-run-as-root -n 5 mpi
 
 ```
-![image](https://user-images.githubusercontent.com/28909864/107071004-5fa84600-67e4-11eb-89cb-570e13deb77b.png)<br/>
+![image](https://user-images.githubusercontent.com/28909864/107274846-42c47a80-6a51-11eb-8ed5-849541ec9786.png)
+<br/>
 Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
 
 ## Bibliografia
