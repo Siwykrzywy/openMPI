@@ -42,7 +42,7 @@ Pojawi się on na liście obrazów:<br/>
 sudo vim Dockerfile
 ```
 Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.<br/>
-6. Teraz używamy komendy 
+6. Teraz używamy komendy, która zbuduje nasz obraz i wykona wszystkie instrukcje pliku dockerfile:
 ```
 docker build -t mpi .
 ```
@@ -59,7 +59,7 @@ Komenda do instalacji docker-compose:
 ```
 pip install docker-compose
 ```
-8. Kolejnym krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
+8. Ostatnim krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
 ```
@@ -126,4 +126,5 @@ Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
 - https://github.com/oweidner/docker.openmpi
 - https://mrpycharm.github.io/openmpi-docker.html
 - https://www.tutorialspoint.com/docker/docker_file.html
+- https://github.com/docker/compose
 - oraz tutoriale z serwisu YT
