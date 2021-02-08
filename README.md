@@ -71,7 +71,7 @@ Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden sere
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107273790-d39a5680-6a4f-11eb-915f-14539051e5e2.png)
-![image](![image](https://user-images.githubusercontent.com/28909864/107273918-05132200-6a50-11eb-9015-39fee31e387b.png)<br/>
+![image](https://user-images.githubusercontent.com/28909864/107273918-05132200-6a50-11eb-9015-39fee31e387b.png)<br/>
 3. Kolejnym krokiem będzie sprawdzenie czy kontenery poprawnie się uruchomiły, realizujemy to komendą:
 ```
 sudo docker ps -a
