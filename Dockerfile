@@ -4,7 +4,7 @@
 FROM ubuntu:18.04
 # FROM phusion/baseimage
 
-MAINTAINER Mateusz Hyjek <mateusz.hyjek@protonmail.com>
+MAINTAINER Jakub Siwon (152031@stud.prz.edu.pl)
 
 ENV USER mpirun
 

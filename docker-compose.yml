@@ -1,6 +1,6 @@
 mpi_head:
     build: .
-    # image: 151969/openmpi
+    # image: mpi
     ports: 
       - "22"
     links: 
@@ -8,28 +8,4 @@ mpi_head:
 
 mpi_node:
     build: .
-    # image: 151969/openmpi
-
-
-# version: "2"
-
-# services:
-#   mpi_head:
-#     build: .
-#     # image: 151969/openmpi
-#     ports: 
-#       - "22"
-#     links: 
-#       - mpi_node
-#     networks:
-#       - net
-
-#   mpi_node:
-#     build: .
-#     # image: 151969/openmpi
-#     networks:
-#       - net
-
-# networks:
-#   net:
-#     driver: bridge
+    # image: mpi
