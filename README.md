@@ -35,7 +35,7 @@ Najwięcej gwiazdek ma phusion/baseimage, zaciągamy ten obraz przy pomocy komen
 ```
 sudo docker pull phusion/baseimage
 ```
-Pojawi się on na liście obrazów
+Pojawi się on na liście obrazów:<br/>
 ![image](https://user-images.githubusercontent.com/28909864/107267134-c331ae00-6a46-11eb-83e8-389c7e3dfb47.png)<br/>
 5. Tworzymy dockerfile, pozwoli on na zbudowanie obrazu, na podstawie obrazu bazowego.
 ```
