@@ -88,7 +88,7 @@ Oraz przejść do katalogu:
  ```
 cd /usr/bin
 ```
-![image](https://user-images.githubusercontent.com/28909864/107274378-94203a00-6a50-11eb-998d-8470ab65d674.png)
+![image](https://user-images.githubusercontent.com/28909864/107274378-94203a00-6a50-11eb-998d-8470ab65d674.png)<br/>
 2. Kolejnym krokiem będzie utworzenie pliku mpi.c przy użyciu komendy
 ```
 touch mpi.c
