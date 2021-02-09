@@ -67,7 +67,7 @@ pip install docker-compose
 sudo docker pull siwykrzywy/openmpi:latest
 ```
 2. Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
-Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1. mpi_head jest hostem i udostępnia serwer SSH dla mpi_node który jest klientem.
+Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serwer mpi_head = 1. mpi_head jest hostem i udostępnia serwer SSH dla mpi_node który jest klientem.
 ```
 sudo docker-compose scale mpi_node=5 mpi_head=1
 ```
