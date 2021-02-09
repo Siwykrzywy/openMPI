@@ -122,9 +122,8 @@ Operacja powiodła się program mpi.c został uruchomiony przez 5 klientów.
 
 ## Bibliografia
 - https://docs.docker.com/engine/install/ubuntu/
-- https://www.researchgate.net/publication/282310578_Building_a_Virtual_HPC_Cluster_with_Auto_Scaling_by_the_Docker
+-https://www.researchgate.net/publication/282310578_Building_a_Virtual_HPC_Cluster_with_Auto_Scaling_by_the_Docker
 - https://github.com/oweidner/docker.openmpi
 - https://mrpycharm.github.io/openmpi-docker.html
 - https://www.tutorialspoint.com/docker/docker_file.html
 - https://github.com/docker/compose
-- oraz tutoriale z serwisu YT
