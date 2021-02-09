@@ -33,7 +33,7 @@ sudo docker search baseimage
 ![image](https://user-images.githubusercontent.com/28909864/107266301-9b8e1600-6a45-11eb-9bf9-90ce5a67bbd3.png)<br/>
 Najwięcej gwiazdek ma phusion/baseimage, zaciągamy ten obraz przy pomocy komendy:
 ```
-sudo docker pull phusion/baseimage
+sudo docker pull phusion/baseimage:master
 ```
 Pojawi się on na liście obrazów:<br/>
 ![image](https://user-images.githubusercontent.com/28909864/107267134-c331ae00-6a46-11eb-83e8-389c7e3dfb47.png)<br/>
@@ -63,7 +63,7 @@ pip install docker-compose
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
 ```
-sudo docker pull Siwykrzywy/openMPI:last
+sudo docker pull siwykrzywy/openmpi:latest
 ```
 2. Następnie przechodzimy do katalogu "openMPI", który właśne został sklonowany.
 Wykonujemy w nim komendę która utworzy klaster n = 5 klientów oraz jeden serewer mpi_head = 1. mpi_head jest hostem i udostępnia serwer SSH dla mpi_node który jest klientem.
