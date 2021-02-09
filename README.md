@@ -42,7 +42,7 @@ Pojawi się on na liście obrazów:<br/>
 sudo vim Dockerfile
 ```
 Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.<br/>
-6. Plik Dockerfile umieszczamy w dowolnym folderze który stworzymy na nasz projekt, muszą się tam również znaleźć wszystkie pliki z tego repozytorium poza docker-comopse.yml
+6. Plik Dockerfile umieszczamy w dowolnym folderze który stworzymy na nasz projekt, muszą się tam również znaleźć wszystkie pliki z tego repozytorium poza docker-comopse.yml <br/>
 7. Następnie w konsoli zmieniamy lokalizację na tenże folder i używamy komendy która zbuduje nasz obraz i wykona wszystkie instrukcje pliku dockerfile:
 ```
 docker build -t mpi .
