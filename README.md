@@ -42,7 +42,8 @@ Pojawi się on na liście obrazów:<br/>
 sudo vim Dockerfile
 ```
 Wewnątrz wklejamy zawartość pliku dockerfile, który znajduje się w tym repoztyrium, polecenia w nim zawarte zainstalują potrzebne nam elementy.<br/>
-6. Teraz używamy komendy, która zbuduje nasz obraz i wykona wszystkie instrukcje pliku dockerfile:
+6. Plik Dockerfile umieszczamy w dowolnym folderze który stworzymy na nasz projekt, muszą się tam również znaleźć wszystkie pliki z tego repozytorium poza docker-comopse.yml
+7. Następnie w konsoli zmieniamy lokalizację na tenże folder i używamy komendy która zbuduje nasz obraz i wykona wszystkie instrukcje pliku dockerfile:
 ```
 docker build -t mpi .
 ```
@@ -51,7 +52,7 @@ Jeśli operacja się powiedzie powinniśmy otrzymać informację zwrotną o powo
 sudo docker image ls
 ```
 ![image](https://user-images.githubusercontent.com/28909864/107272145-8f0dbb80-6a4d-11eb-8b67-56717f983685.png)<br/>
-7. Następnie będziemy musieli zainstalować docker-compose, pozwala on uruchamiać wiele kontenerów, bez konieczności ręcznego konfigurowania każdego z nich. Zainstalujemy go używając pip, komenda do instalacji pip:
+8. Następnie będziemy musieli zainstalować docker-compose, pozwala on uruchamiać wiele kontenerów, bez konieczności ręcznego konfigurowania każdego z nich. Zainstalujemy go używając pip, komenda do instalacji pip:
 ```
 sudo apt install python3-pip
 ```
@@ -59,7 +60,7 @@ Komenda do instalacji docker-compose:
 ```
 pip install docker-compose
 ```
-8. Ostatnim krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
+9. Ostatnim krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
 ## Przygotowanie klastra HPC
 1. Pobieramy obraz dockera z repozytorium komendą:
 ```
