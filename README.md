@@ -105,7 +105,7 @@ sudo apt-get install vim
 vi mpi.c
 
 ```
-5. Wpisać kod testowy, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść
+5. Wpisać kod testowy, następnie otworzyć konsolę wciskajac ESC i wpisać ":x", aby zapisać zmiany i wyjść<br/>
 ![image](https://user-images.githubusercontent.com/28909864/107070447-a6497080-67e3-11eb-90c4-071a90aa8e4b.png)
 6. Teraz należy skompliować plik komendą:
 ```
