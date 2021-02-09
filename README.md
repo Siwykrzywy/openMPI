@@ -62,7 +62,7 @@ pip install docker-compose
 ```
 9. Ostatnim krokiem będzie stworzenie pliku docker-compose.yml na wzór tego w repozytorium.
 ## Przygotowanie klastra HPC
-1. Pobieramy obraz dockera z repozytorium komendą:
+1. Pobieramy obraz dockera z repozytorium komendą, jeśli wykonaliśmy rozdział "Opis przygotowania obrazu docker", to nie musimy go pobierać bo właśnie go stworzyliśmy:
 ```
 sudo docker pull siwykrzywy/openmpi:latest
 ```
